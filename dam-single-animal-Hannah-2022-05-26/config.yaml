@@ -1,0 +1,89 @@
+    # Project definitions (do not edit)
+Task: dam-single-animal
+scorer: Hannah
+date: May26
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: ./dam-single-animal-Hannah-2022-05-26
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+
+bodyparts:
+- dam_nose
+- left_eye
+- right_eye
+- left_ear
+- right_ear
+- top_head_dam
+- back_1_left
+- back_1_right
+- back_1_center
+- back_2
+- back_3
+- back_4
+- back_5
+- back_6
+- back_7
+- back_8
+- back_9
+- back_10
+- tail_base
+- left_armpit
+- left_shoulder
+- left_wrist
+- left_palm
+- left_leg_front
+- left_leg_behind
+- left_ankle
+- left_ventrum_side
+- right_armpit
+- right_shoulder
+- right_wrist
+- right_palm
+- right_leg_front
+- right_leg_behind
+- right_ankle
+- right_ventrum_side
+- center_ventrum
+- btwn_arms
+- btwn_legs
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 5
+
+    # Plotting configuration
+skeleton:
+
+skeleton_color: red
+pcutoff: 0.5
+dotsize: 10
+alphavalue: 0.8
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.98
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: 10
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true

@@ -1,0 +1,86 @@
+all_joints:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- - 6
+- - 7
+- - 8
+- - 9
+- - 10
+- - 11
+- - 12
+- - 13
+- - 14
+- - 15
+- - 16
+- - 17
+- - 18
+- - 19
+- - 20
+- - 21
+- - 22
+- - 23
+- - 24
+- - 25
+- - 26
+- - 27
+- - 28
+- - 29
+- - 30
+- - 31
+- - 32
+- - 33
+- - 34
+- - 35
+- - 36
+- - 37
+all_joints_names:
+- dam_nose
+- left_eye
+- right_eye
+- left_ear
+- right_ear
+- top_head_dam
+- back_1_left
+- back_1_right
+- back_1_center
+- back_2
+- back_3
+- back_4
+- back_5
+- back_6
+- back_7
+- back_8
+- back_9
+- back_10
+- tail_base
+- left_armpit
+- left_shoulder
+- left_wrist
+- left_palm
+- left_leg_front
+- left_leg_behind
+- left_ankle
+- left_ventrum_side
+- right_armpit
+- right_shoulder
+- right_wrist
+- right_palm
+- right_leg_front
+- right_leg_behind
+- right_ankle
+- right_ventrum_side
+- center_ventrum
+- btwn_arms
+- btwn_legs
+dataset: training-datasets\iteration-0\UnaugmentedDataSet_dam-single-animalMay26\dam-single-animal_Hannah98shuffle1.mat
+global_scale: 0.8
+init_weights: C:\ProgramData\Anaconda\envs\DEEPLABCUT\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: resnet_50
+num_joints: 38
+scoremap_dir: test
