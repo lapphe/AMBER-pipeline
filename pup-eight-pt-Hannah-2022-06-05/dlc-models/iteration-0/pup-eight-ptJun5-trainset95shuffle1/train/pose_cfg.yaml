@@ -1,0 +1,163 @@
+all_joints:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- - 6
+- - 7
+- - 8
+all_joints_names:
+- nose
+- eyes
+- ears
+- back1
+- back2
+- back3
+- back4
+- back5
+- back6
+alpha_r: 0.02
+apply_prob: 0.5
+batch_size: 8
+contrast:
+  clahe: true
+  claheratio: 0.1
+  histeq: true
+  histeqratio: 0.1
+convolution:
+  edge: false
+  emboss:
+    alpha:
+    - 0.0
+    - 1.0
+    strength:
+    - 0.5
+    - 1.5
+  embossratio: 0.1
+  sharpen: false
+  sharpenratio: 0.3
+crop_sampling: hybrid
+crop_size:
+- 400
+- 400
+cropratio: 0.4
+dataset: training-datasets/iteration-0/UnaugmentedDataSet_pup-eight-ptJun5/pup-eight-pt_Hannah95shuffle1.pickle
+dataset_type: multi-animal-imgaug
+decay_steps: 30000
+display_iters: 500
+global_scale: 0.8
+init_weights: /home/pheno/anaconda3/envs/DEEPLABCUT/lib/python3.8/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt
+intermediate_supervision: false
+intermediate_supervision_layer: 12
+location_refinement: true
+locref_huber_loss: true
+locref_loss_weight: 0.05
+locref_stdev: 7.2801
+lr_init: 0.0005
+max_input_size: 1500
+max_shift: 0.4
+metadataset: training-datasets/iteration-0/UnaugmentedDataSet_pup-eight-ptJun5/Documentation_data-pup-eight-pt_95shuffle1.pickle
+min_input_size: 64
+mirror: false
+multi_stage: true
+multi_step:
+- - 0.0001
+  - 7500
+- - 5.0e-05
+  - 12000
+- - 1.0e-05
+  - 200000
+net_type: resnet_50
+num_idchannel: 0
+num_joints: 9
+num_limbs: 36
+optimizer: adam
+pafwidth: 20
+pairwise_huber_loss: false
+pairwise_loss_weight: 0.1
+pairwise_predict: false
+partaffinityfield_graph:
+- - 0
+  - 1
+- - 0
+  - 2
+- - 0
+  - 3
+- - 0
+  - 4
+- - 0
+  - 5
+- - 0
+  - 6
+- - 0
+  - 7
+- - 0
+  - 8
+- - 1
+  - 2
+- - 1
+  - 3
+- - 1
+  - 4
+- - 1
+  - 5
+- - 1
+  - 6
+- - 1
+  - 7
+- - 1
+  - 8
+- - 2
+  - 3
+- - 2
+  - 4
+- - 2
+  - 5
+- - 2
+  - 6
+- - 2
+  - 7
+- - 2
+  - 8
+- - 3
+  - 4
+- - 3
+  - 5
+- - 3
+  - 6
+- - 3
+  - 7
+- - 3
+  - 8
+- - 4
+  - 5
+- - 4
+  - 6
+- - 4
+  - 7
+- - 4
+  - 8
+- - 5
+  - 6
+- - 5
+  - 7
+- - 5
+  - 8
+- - 6
+  - 7
+- - 6
+  - 8
+- - 7
+  - 8
+partaffinityfield_predict: true
+pos_dist_thresh: 17
+pre_resize: []
+project_path: /media/pheno/Vol1/dlc-projects/home-cage-3-models/pup-eight-pt-Hannah-2022-06-05
+rotation: 25
+rotratio: 0.4
+save_iters: 10000
+scale_jitter_lo: 0.5
+scale_jitter_up: 1.25
+weigh_only_present_joints: false
