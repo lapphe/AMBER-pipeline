@@ -1,0 +1,92 @@
+    # Project definitions (do not edit)
+Task: pup-eight-pt
+scorer: Hannah
+date: Jun5
+multianimalproject: true
+identity: false
+
+    # Project path (change when moving around)
+project_path: /pup-eight-pt-Hannah-2022-06-05
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  
+ 
+individuals:
+- pup1
+- pup2
+- pup3
+- pup4
+- pup5
+- pup6
+- pup7
+- pup8
+- pup9
+- pup10
+- pup11
+- pup12
+uniquebodyparts: []
+multianimalbodyparts:
+- nose
+- eyes
+- ears
+- back1
+- back2
+- back3
+- back4
+- back5
+- back6
+bodyparts: MULTI!
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 4
+
+    # Plotting configuration
+skeleton:
+- - nose
+  - eyes
+- - eyes
+  - ears
+- - ears
+  - back1
+- - back1
+  - back2
+- - back2
+  - back3
+- - back3
+  - back4
+- - back4
+  - back5
+- - back5
+  - back6
+skeleton_color: red
+pcutoff: 0.5
+dotsize: 8
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: dlcrnet_ms5
+default_augmenter: multi-animal-imgaug
+default_track_method: ellipse
+snapshotindex: 'all'
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
