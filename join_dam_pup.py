@@ -69,7 +69,7 @@ def main(argv):
             pass
         out_path = video_directory + os.sep + 'AMBER_joined_pose_estimation' + os.sep + key + '_dam_pup.csv'
         merged_df.to_csv(out_path, index=False)
-        print(out_path)
+        #print(out_path)
 
 
 def run_join_dam_pup():
