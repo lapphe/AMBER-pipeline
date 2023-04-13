@@ -83,6 +83,9 @@ def main(argv):
     print()
     print('Joining dam and pup pose estimation files')
     join_dam_pup.main(argv)
+    print()
+    print('AMBER pose estimation steps complete!')
+    print('Joined pose estiamtion files are ready for behavior classification.')
 
 def run_amber_pose_estimation():
     sys.exit(main(sys.argv))
@@ -91,8 +94,6 @@ def run_amber_pose_estimation():
 if __name__ == '__main__':
     run_amber_pose_estimation()
     
-print()
-print('AMBER pose estimation steps complete!')
-print('Joined pose estiamtion files are ready for behavior classification.')
+
 
 
