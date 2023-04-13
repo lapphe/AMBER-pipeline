@@ -67,7 +67,7 @@ def main(argv):
             os.makedirs(video_directory + os.sep + 'AMBER_joined_pose_estimation' + os.sep)
         except FileExistsError:
             pass
-        out_path = video_directory + os.sep + 'AMBER_joined_pose_estimation' + os.sep + key + '_dam_pup.csv'
+        out_path = video_directory + os.sep + 'AMBER_joined_pose_estimation' + os.sep + key + '.csv'
         merged_df.to_csv(out_path, index=False)
         #print(out_path)
 
