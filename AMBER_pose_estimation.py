@@ -8,10 +8,12 @@
 
 print('Importing packages')
 import os
+import shutil
 import sys
 import deeplabcut
-import PhenoPickleRaw as PhenoPickleRaw
+import pheno_pickle_raw as PhenoPickleRaw
 import join_dam_pup
+
 
 
 def main(argv):
@@ -34,7 +36,17 @@ def main(argv):
         #Create videos to check detections for dam tracking
         print()
         print('Creating dam tracking videos')
-        deeplabcut.create_labeled_video(dam_config, [video_directory], save_frames = False)
+        deeplabcut.create_labeled_video(dam_config, [video_directory], save_frames=False)
+        track_video = video_directory + os.sep + 'pose_estimation_videos' + os.sep
+        try:
+            os.makedirs(track_video)
+        except FileExistsError:
+            pass
+        for file_name in os.listdir(video_directory):
+            if "dam-single-animal" in file_name and file_name.endswith('.mp4'):
+                src_path = os.path.join(video_directory, file_name)
+                dst_path = os.path.join(track_video, file_name)
+                shutil.move(src_path, dst_path)
     else:
         print()
         print(' Skipping create tracking videos')
@@ -49,6 +61,11 @@ def main(argv):
         print()
         print('Creating pup detections videos')
         deeplabcut.create_video_with_all_detections(pup_config, [video_directory])
+        for file_name in os.listdir(video_directory):
+            if "pup-nine-pt" in file_name and file_name.endswith('.mp4'):
+                src_path = os.path.join(video_directory, file_name)
+                dst_path = os.path.join(track_video, file_name)
+                shutil.move(src_path, dst_path)
     else:
         print()
         print(' Skipping create tracking videos')
