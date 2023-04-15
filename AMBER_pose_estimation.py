@@ -1,4 +1,5 @@
 #Hannah Lapp
+#updated April 15, 2023
 
 #Make sure you have activated your deeplabcut conda environment
 #conda activate DEEPLABCUT
