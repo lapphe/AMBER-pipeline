@@ -1,4 +1,4 @@
-# by Cem B
+# by Cem B and Hannah Lapp
 
 import pickle
 import sys
