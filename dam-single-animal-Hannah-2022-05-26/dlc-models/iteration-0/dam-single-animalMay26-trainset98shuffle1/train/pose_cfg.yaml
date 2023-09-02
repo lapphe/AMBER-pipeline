@@ -78,7 +78,7 @@ all_joints_names:
 - btwn_legs
 alpha_r: 0.02
 apply_prob: 0.5
-batch_size: 8
+batch_size: 1
 contrast:
   clahe: true
   claheratio: 0.1
@@ -102,7 +102,7 @@ dataset_type: imgaug
 decay_steps: 30000
 display_iters: 1000
 global_scale: 0.8
-init_weights: C:\ProgramData\Anaconda\envs\DEEPLABCUT\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
+init_weights: snapshot-700000
 intermediate_supervision: false
 intermediate_supervision_layer: 12
 location_refinement: true

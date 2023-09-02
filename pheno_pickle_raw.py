@@ -50,13 +50,15 @@ def unpickle_input(file_path, directory_path, max_tracks, empty_cell_val):
         # Read the coordinates and put them into data_row in the correct shape
         for bp, arr in enumerate(v['coordinates'][0]):
             for p, xy_coords in enumerate(arr):
-                data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_x'] = xy_coords[0]
-                data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_y'] = xy_coords[1]
+                if p < max_tracks:
+                    data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_x'] = xy_coords[0]
+                    data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_y'] = xy_coords[1]
 
         # Read the confidences and put them into data_row
         for bp, arr in enumerate(v['confidence']):
             for p, pup_conf in enumerate(arr):
-                data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_likelihood'] = pup_conf[0]
+                if p < max_tracks:
+                    data_row['pup' + str(p+1) + '_' + body_parts[bp] + '_likelihood'] = pup_conf[0]
 
         # for i in range(len(confidence_row)):
         output.append(data_row)
