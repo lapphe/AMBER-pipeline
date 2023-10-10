@@ -61,7 +61,7 @@ e.g. `Python AMBER_pose_estimation.py C:\Desktop\hannah_test_short skip_create_v
 # Behavior classification <br>
 Behavior classification is performed in SimBA using the preconfigure AMBER_SimBA_project. <br>
 
-1. Start the SimBA conda environment and open simba**
+1. Start the SimBA conda environment and open simba
 <br>
 `conda activate simbaenv` <br>
 `simba` <br>
