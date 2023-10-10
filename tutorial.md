@@ -37,11 +37,11 @@ The script will automatically run the following steps:
 3. Move to the AMBER-pipeline directory <br>
 Change your current directory so you are in the AMBER-pipeline directory containing all the files downloaded when you cloned the AMBER repository using `cd /d path/to/directory` on windows
 <br> e.g. if the AMBER-pipeline folder is located on the desktop: `cd /d C:\Desktop\AMBER-pipeline`
-<br>
+
 4. Make sure all the videos you want to run are located in a single folder** <br>
 They can be anywhere on your computer -they do not need to be in the AMBER-pipeline folder. Copy the address of the folder containing the videos to run. <br>
    _Note: in windows, you can copy the directory path by right-clicking on the folder name in the file explorer and selection “Copy address as text”. You can then paste it in the the command window_
-<br>
+
 5. Run pose estimation steps** <br>
 To run pose estimation, you will enter “python”, the script name,  followed by the path to the directory where your videos are location.
 <br> 
@@ -53,13 +53,13 @@ The deeplabcut files will appear in the same directory as your videos. There wil
 The first folder, _pose_estimation_videos_, contains the video with the labeled dam and pup points to check model performance. These videos have been move to a separate directory to make importing videos into SimBA easier later on. <br>
 <br>
 The second folder, _AMBER_joined_pose_estimation_, contains the reformatted and combined pose estimation files with dam and pup tracking that are used during behavior classification in SimBA. 
-<br> 
+ 
 6. Check your pose estimation videos 
 Check the labeled videos to ensure that the tracking looks good before proceeding to behavior classification. If the pose estimation models are not performing well, you may need to label additional frames from your videos and retrain the dam or pup models. Note that pose estimation does not need to be perfect to get accurate behavior classification, but major tracking mistakes will reduce the performance of the classifiers. 
 <br>
 If you feel confident in the pose estimation model performance on your videos and want to skip the “create tracking videos” step, you can add the “skip_create_videos” argument when you run the script.  <br>
 e.g. `Python AMBER_pose_estimation.py C:\Desktop\hannah_test_short skip_create_videos`
-<br>
+
 7. Exit your deeplabcut conda environment** <br>
 `conda deactivate`
 
