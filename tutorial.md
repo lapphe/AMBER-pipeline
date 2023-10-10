@@ -4,8 +4,10 @@
 You can use the provided example videos or your own videos to complete this tutorial. The example video files can be downloaded from our OSF repository (https://osf.io/e3dyc/) from the "example_videos" folder. <br>
 ![OSF example videos](https://github.com/lapphe/AMBER-pipeline/assets/53009913/f2d20ad6-fbf3-4b65-bd59-a5a92354af95)
 <br> 
+<br>
+
 If you are using your own videos, make sure all the videos you want to analyze at once are in their own  directory on your computer. The pose estimation script will run pose estimation steps on all the video files in the folder you give it. Make sure any videos you do not want run are moved to another location. <br>
-If you are wondering about the best way to set up home cage video recordings, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording). 
+<br>If you are wondering about the best way record videos to be compatible with AMBER, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording). 
 <br>
 Make sure you have followed the instructions for installing and setting up <br>
 1) DeepLabCut <br>
