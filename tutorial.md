@@ -16,7 +16,7 @@ Make sure you have followed the instructions for installing and setting up: <br>
 <br>
 Detailed installation and set up instructions can be found [here](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up "AMBER installation and set up")
 
-# Step 1: Pose estimation
+# Pose estimation
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
 <br>The script will automatically run the following steps:<br>
 ----1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
@@ -27,7 +27,7 @@ The AMBER_pose_estimation.py script will run your videos through all pose estima
 ----6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
 <br>
 
-# Pose estimation: 
+## Run pose estimation: 
 <br> 1) Open the windows command prompt with administrator privileges
 <br>
 <br> 2) Activate your deeplabcut conda environment: <br> 
@@ -66,29 +66,35 @@ e.g. `Python AMBER_pose_estimation.py C:\Desktop\hannah_test_short skip_create_v
 # Behavior classification <br>
 Behavior classification is performed in SimBA using the preconfigure AMBER_SimBA_project. <br>
 
-1) Start the SimBA conda environment and open simba <br>
+### Start the SimBA conda environment and open simba <br>
 `conda activate simbaenv` <br>
 `simba` <br>
 <br>
-2) Load the SimBA_AMBER_project using the SimBA GUI. The project config file is found in _AMBER-pipeline/SimBA_AMBER_project/project_folder/project_config.ini_. From here, you can follow the SimBA user [guide for analyzing new videos](https://github.com/sgoldenlab/simba/blob/master/docs/Scenario2.md). Below is an overview of the steps. <br>
+### Load the SimBA_AMBER_project using the SimBA GUI. <br>
+The project config file is found in _AMBER-pipeline/SimBA_AMBER_project/project_folder/project_config.ini_. From here, you can follow the SimBA user [guide for analyzing new videos](https://github.com/sgoldenlab/simba/blob/master/docs/Scenario2.md). Below is an overview of the steps. <br>
 <br>
-3) **Import your Videos** <br> These are the videos you performd pose estimation on. You can select the "Import SYMLINK" box to use symbolic links to the videos instead of copying the full videos into the SimBA project.
+### **Import your Videos** <br> 
+These should be the same videos you performd pose estimation on. You can select the "Import SYMLINK" box to use symbolic links to the videos instead of copying the full videos into the SimBA project.
 <br>
-4) **Import your tracking data**.  These csv files can be found in the “AMBER_joined_pose_estimation” folder created during pose estimation.  <br>
+### **Import your tracking data** ,br>
+These csv files can be found in the “AMBER_joined_pose_estimation” folder created during pose estimation.  <br>
 <br>
-5) **Set video parameters:** As described in the [Video recording section](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording "Video recording for AMBER"), we used the know distance of the food hopper, which is positioned about halfway of the depth of the cage (see images on under Video Recording). As a side-view recording, distances calculated will not be completely accurate since the actual distance varies depending on the location of the animal in the cage. However, setting these known distances helps account for variation in recording resolution and the distance from the cage to the front of the cage. Ifyour cage set up is different, you can select a different know distance visible in your videos, although we suggst selecting something that is about at the mid point of the cage depth. <br>
+### **Set video parameters**<br>
+As described in the [Video recording section](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording "Video recording for AMBER"), we used the know distance of the food hopper, which is positioned about halfway of the depth of the cage (see images on under Video Recording). As a side-view recording, distances calculated will not be completely accurate since the actual distance varies depending on the location of the animal in the cage. However, setting these known distances helps account for variation in recording resolution and the distance from the cage to the front of the cage. Ifyour cage set up is different, you can select a different know distance visible in your videos, although we suggst selecting something that is about at the mid point of the cage depth. <br>
 <br>
-6) **Outlier correction:** We recommend skipping outlier correction because this step relies on body-length distance across all frames to perform these calculations, which is influenced by the dramatic differences in body length when the dam is near the front versus back of the cage.
+### **Outlier correction**<br>
+We recommend skipping outlier correction because this step relies on body-length distance across all frames to perform these calculations, which is influenced by the dramatic differences in body length when the dam is near the front versus back of the cage.<br>
 (Don’t forget to actually tell SimBA to skip this step on the Outlier Correction tab! This will ensure the csv files are copied over to the new location and can be used ifor feature extraction in the next step.) <br>
 <br>
-7) **Extract features:** Select "Apply user-defined feature extraction script" and use the customized AMBER feature extraction script. This script is located in AMBER-pipline/SimBA_AMBER_project/AMBER_feature_extraction/amber_feature_extraction.py<br>
+### **Extract features**<br>
+Select "Apply user-defined feature extraction script" and use the customized AMBER feature extraction script. This script is located in AMBER-pipline/SimBA_AMBER_project/AMBER_feature_extraction/amber_feature_extraction.py<br>
 ![extract features](https://user-images.githubusercontent.com/53009913/232091989-cd38972c-6d97-4248-b5c8-2384bc7938e5.png)
 <br>
-_Note: This step can take a long time for long videos. The convex hull and back circle fitting calculations take a lof of computational time, but are among the most important features for several behavioral classifiers. For an hour long video recorded at 30fps, this step takes about 25 minutes per video, however, run time will vary depending on your computer specs._ <br.
+_Note: This step can take a long time for long videos. The convex hull and back circle fitting calculations take a lot of computational time, but are among the most important features for several behavioral classifiers. For an hour long video recorded at 30fps, this step takes about 25 minutes per video, however, run time will vary depending on your computer specs._ <br.
 <br>
 <br>
-(Skip "Label behavior" and "Train machine models" steps. Those steps are used for creating new behavior classifier models. We will use previously created models) <br>
-8) **Run the machine models:**
+**(Skip "Label behavior" and "Train machine models" steps. Those steps are used for creating new behavior classifier models. We will use previously created models)** <br>
+### **Run the machine models** <br>
 It’s a good idea to [validate the provided models on your videos](https://github.com/sgoldenlab/simba/blob/master/docs/validation_tutorial.md) on your videos* and determine a good discrimination threshold for each classifier before running the models on all of your videos. Below are discrimination thresholds that work well for the example videos, but you should confirm performance with your own videos. <br>
     Nest attndance: 0.5<br>
     Active nursing: 0.4 <br>
@@ -97,9 +103,10 @@ It’s a good idea to [validate the provided models on your videos](https://gith
     Eating: 0.28 <br>
     Drinking: 0.22 <br>
 <br>
-**To analyze all of your videos:** Find the models (they were moved to _AMBER-pipline/SimBA_AMBER_project/models_ during set up) and then enter the discrimination threshold and minimum bout length for analysis. Click “Run models”. <br>
+### **Analyze all of your videos** <br>
+Find the models (they were moved to _AMBER-pipline/SimBA_AMBER_project/models_ during set up) and then enter the discrimination threshold and minimum bout length for analysis. Click “Run models”. <br>
 <br>
 <br>
-**Congratulations, you now have maternal behavior annotations!** 
+## **Congratulations, you now have maternal behavior annotations!** 
 <br>
 SimBA provides several tools for post-classification analysis and [visualizations](https://github.com/sgoldenlab/simba/blob/master/docs/visualizations_tutorial.md) that can be used with your data. Or, you can use the csv files found in _?AMBER_SimBA_project/project_folder/csv/machine_results_ that contain behavior lables for each frame along with the extracted features and pose estimation coordinates for all body parts. 
