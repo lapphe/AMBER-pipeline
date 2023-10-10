@@ -9,10 +9,10 @@ If you are using your own videos, make sure all the videos you want to analyze a
 <br>If you are wondering about the best way record videos to be compatible with AMBER, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording). <br>
 <br>
 Make sure you have followed the instructions for installing and setting up: <br>
-1) DeepLabCut <br>
-2) SimBA <br>
-3) AMBER files from this github repository<br>
-4) Behavior classifiers from the OSF repository <br>
+1. DeepLabCut <br>
+2. SimBA <br>
+3. AMBER files from this github repository<br>
+4. Behavior classifiers from the OSF repository <br>
 <br>
 Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
 
