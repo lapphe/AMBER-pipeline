@@ -13,7 +13,8 @@ See our [annotations wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Be
 AMBER behavior classifiers for SimBA can be downloaded from OSF: https://osf.io/e3dyc/ <br>
 
 # Example useage
-Check out the [tutorial](https://github.com/lapphe/AMBER-pipeline/blob/main/tutorial.md) for step by step instructions for using the AMBER pipline on example videos or your own videos.
+Check out the [tutorial](https://github.com/lapphe/AMBER-pipeline/blob/main/tutorial.md) for step by step instructions for using the AMBER pipline on example videos or your own videos.<br>
+For the pose estimation steps, videos can be run in batch using the command line (`python AMBER_pose_estimation.py /path/to/videos`) or completed using the supplied Jupyter notebook.
 
 # Installation and set up
 See the [installation wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) for detailed information. We recommend installing deeplabcut and SimBA in different anaconda environments as these software programs have different dependency requirements. 
