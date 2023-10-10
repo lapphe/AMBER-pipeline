@@ -1,11 +1,30 @@
-#Hannah Lapp
-#updated April 15, 2023
+"""
+This is a runner script that will perform several steps of the AMBER pipeline:
+    -dam pose estimation
+    -pup pose estiamtion (multi animal with auto_track = False)
+    -create tracking videos for dam and pup pose estimation data
+    -convert pup detections (.pickle) to csv files
+    - join dam and pup data
 
-#Make sure you have activated your deeplabcut conda environment
-#conda activate DEEPLABCUT
+Each step will be performed on all of the videos in the directory indicated
 
-#navigate to the AMBER-pipeline folder before runing this script
+Run in windows command line
+Navigate to the AMBER-pipeline folder in the command line before runing this script
+Make sure you have activated your deeplabcut conda environment
 
+Args:
+    The only required arg is the path to the directory containing the videos to be analyzed
+
+
+Example 
+    in the command line:
+        conda activate DEEPLABCUT
+        python AMBER_pose_estimation.py path/to/videos
+        
+Author: Hannah Lapp
+Last updated October 5, 2023
+
+"""
 
 print('Importing packages')
 import os

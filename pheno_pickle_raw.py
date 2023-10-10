@@ -21,8 +21,35 @@ def show_help():
 
 
 def unpickle_input(file_path, directory_path, max_tracks, empty_cell_val):
-    print('   Unpickling', file_path)
+    """
+    Converts the .pickle file containing pup detectionts, restructures its data, and exports it as a CSV file.
+    Note: Although detected points are placed in columns contianing pup IDs, this placement is arbitrary and does not 
+    necessarily mean that the dection belongs to that particular pup. For exmaple, the nose, eye, head, and back points
+    assigned to 'pup1' may belong to the same pups or may belong to different pups. Likewise, point assignments are 
+    not consistent across frames. Forexample, the nose point for pup1 in frame n and n+1 may belong to different 
+    individuals.  
 
+    Args:
+        file_path (str): The path to the input pickle file.
+        directory_path (str): The directory where the output CSV file will be saved.
+        max_tracks (int): The maximum number of tracked items (e.g., pups) to extract from the pickle file.
+        empty_cell_val: The value to fill empty cells with in the output CSV file.
+
+    Returns:
+        None
+
+    This function reads a DataFrame from the specified pickle file, restructures the data to create a new DataFrame
+    suitable for SimBA analysis, and exports it as a CSV file. It processes tracking data for multiple body parts and tracks
+    (e.g., 'pup1_nose_x', 'pup2_eyes_y', etc.) and organizes it into rows based on the frame number. The CSV file is 
+    saved with _UNPICLED.csv appended to the filename.
+
+    Example:
+        To unpickle a file 'video1.pickle' and save the output in the 'output_directory' with a maximum of 12 tracked pups
+        and using a value of NA for empty cells:
+        
+        >>> unpickle_input('video1.pickle', 'output_directory', 12, 'NA')
+    """
+    print('   Unpickling', file_path)
     df = pd.read_pickle(file_path)
     print('   Read pickle file with', len(df), 'frames containing detections')
 
@@ -82,6 +109,42 @@ def unpickle_input(file_path, directory_path, max_tracks, empty_cell_val):
 
 
 def main(args, max_tracks=12, empty_cell_val='NA', file_path=None, directory_path=None):
+    """
+    Executes the PhenoPickleRaw tool to unpickle and process raw tracking data from one or more pickle files.
+
+    Args:
+        max_tracks (int, optional): The maximum number of tracked pups to extract from the pickle files.
+            Defaults to 12.
+        empty_cell_val (str, optional): The value to fill empty cells with in the output CSV file. Defaults to 'NA'.
+        file_path (str, optional): The path to an individual input pickle file (if specified). Defaults to None.
+        directory_path (str, optional): The directory where input pickle files are located. Defaults to None.
+
+    Returns:
+        None
+
+    This function is the entry point for the PhenoPickleRaw tool, which processes raw tracking data stored in pickle
+    files. It accepts command-line arguments to specify input files, output format, and processing options.
+
+    Args:
+        - -input_directory:<path>: Specify the input directory containing pickle files created during pup pose estimation.
+        - -input_file:<filename>: Specify an individual input pickle file.
+        - -output:<output_path>: Specify the path for the output CSV file (must end with '.csv').
+        - -max_tracks:<max_tracks>: Set the maximum number of tracked items to process.
+        - -empty_cell_val:<value>: Set the value to fill empty cells in the output CSV.
+
+    Example:
+        To process tracking data from pickle files in the 'data' directory and save the output as 'output.csv' with a
+        maximum of 5 tracked items and using 'NA' for empty cells:
+
+        >>> main(['-input_directory:AMBER-pipeline/video_analysis', '-output:output.csv', '-max_tracks:5', '-empty_cell_val:NA'])
+
+    Note:
+        - If -input_file is specified, it will process the individual file.
+        - If -input_directory is specified, it will search for all '.full.pickle' files in the directory.
+        - The -output argument must end with '.csv'.
+        - If no input files are found or specified, the function will print an error message and exit.
+
+    """
     input_files = []
     file_name = None
 
