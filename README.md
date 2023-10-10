@@ -33,11 +33,12 @@ The AMBER custom feature extraction script uses functions from the circle-fit pa
 
 2. You will need to update the AMBER SimBA project config file to reflect the specific location (path) of the project files on your computer. To do this, find the project_config.ini file located in AMBER-pipeline/SimBA_AMBER_project/project_folder/.
 
-3.Double click to open the file in a text editor. The **project_path **(line 2) and **model_dir** (line 8) need to be updated to reflect the current location. 
-4.The behavioral classifiers are large files and cannot be stored on github. Please download them from our [OSF repository](https://osf.io/e3dyc/). Move the behavior classification models to the “models” folder in AMBER-pipeline/SimBA_AMBER_project/models. This is inside the directory cloned from the AMBER github repository
+3. Update the **project_path** (line 2) and **model_dir** (line 8) int he config file to reflect the current location. 
+4. The behavioral classifiers are large files and cannot be stored on github. Please download them from our [OSF repository](https://osf.io/e3dyc/). Move the behavior classification models to the “models” folder in AMBER-pipeline/SimBA_AMBER_project/models.
 ![OSF download small](https://user-images.githubusercontent.com/53009913/232550321-32c23eca-334e-4c9e-a762-39e07590a962.png)
 
 # References and resources
 [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) <br>
 [SimBA](https://github.com/sgoldenlab/simba/tree/master)<br>
+[AMBER bioxriv preprint](https://www.biorxiv.org/content/10.1101/2023.09.15.557946v1)
 
