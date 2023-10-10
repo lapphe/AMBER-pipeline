@@ -16,8 +16,7 @@ AMBER behavior classifiers for SimBA can be downloaded from OSF: https://osf.io/
 Check out the [tutorial](https://github.com/lapphe/AMBER-pipeline/blob/main/tutorial.md) for step by step instructions for using the AMBER pipline on example videos or your own videos.
 
 # Installation and set up
-See the [installation wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) for detailed information. <br>
-We recommend installing deeplabcut and SimBA in different anaconda environments as these software programs have different dependency requirements. 
+See the [installation wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) for detailed information. We recommend installing deeplabcut and SimBA in different anaconda environments as these software programs have different dependency requirements. 
 This workflow has been tested on Windows 11. <br>
 ## Deeplabcut
 Our models were generated with DeepLabCut version 2.3.0, but should be compatible with newer versions. 
