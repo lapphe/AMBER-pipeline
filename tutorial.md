@@ -81,19 +81,19 @@ We recommend skipping outlier correction because this step relies on body-length
 7. Extract features <br>
 Select "Apply user-defined feature extraction script" and use the customized AMBER feature extraction script. This script is located in AMBER-pipline/SimBA_AMBER_project/AMBER_feature_extraction/amber_feature_extraction.py<br>
 ![extract features](https://user-images.githubusercontent.com/53009913/232091989-cd38972c-6d97-4248-b5c8-2384bc7938e5.png)
-<br>
-_Note: This step can take a long time for long videos. The convex hull and back circle fitting calculations take a lot of computational time, but are among the most important features for several behavioral classifiers. For an hour long video recorded at 30fps, this step takes about 25 minutes per video, however, run time will vary depending on your computer specs._ <br>
 
+_Note: This step can take a long time for long videos. The convex hull and back circle fitting calculations take a lot of computational time, but are among the most important features for several behavioral classifiers. For an hour long video recorded at 30fps, this step takes about 25 minutes per video, however, run time will vary depending on your computer specs._ 
+<br>
 **(Skip the "Label behavior" and "Train machine models" steps. Those steps are used for creating new behavior classifier models. We will use previously created models)** 
 
 8. Run the machine models <br>
 It’s a good idea to [validate the provided models on your videos](https://github.com/sgoldenlab/simba/blob/master/docs/validation_tutorial.md) on your videos* and determine a good discrimination threshold for each classifier before running the models on all of your videos. Below are discrimination thresholds that work well for the example videos, but you should confirm performance with your own videos. <br>
-    Nest attndance: 0.5<br>
-    Active nursing: 0.4 <br>
-    Passive nursing: .2 <br>
-    Self-directed grooming: 0.25 <br>
-    Eating: 0.28 <br>
-    Drinking: 0.22 
+    **Nest attndance:** 0.5<br>
+    **Active nursing:** 0.4 <br>
+    **Passive nursing:** .2 <br>
+    **Self-directed grooming:** 0.25 <br>
+    **Eating:** 0.28 <br>
+    **Drinking:** 0.22 
 9. Analyze all of your videos <br>
 Find the models (they were moved to _AMBER-pipline/SimBA_AMBER_project/models_ during set up) and then enter the discrimination threshold and minimum bout length for analysis. Click “Run models”. <br>
 ### Congratulations, you now have maternal behavior annotations!
