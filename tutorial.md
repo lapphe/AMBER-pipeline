@@ -35,12 +35,12 @@ The script will automatically run the following steps:
 ``conda activate DEEPLABCUT``
 
 3. Move to the AMBER-pipeline directory <br>
-Change your current directory so you are in the AMBER-pipeline directory containing all the files downloaded when you cloned the AMBER repository using `cd /d path/to/directory` on windows
+Change your current directory so you are in the AMBER-pipeline directory containing all the files downloaded when you cloned the AMBER repository using `cd /d path/to/directory` on Windows
 <br> e.g. if the AMBER-pipeline folder is located on the desktop: `cd /d C:\Desktop\AMBER-pipeline`
 
 4. Make sure all the videos you want to run are located in a single folder <br>
 They can be anywhere on your computer -they do not need to be in the AMBER-pipeline folder. Copy the address of the folder containing the videos to run. <br>
-   _Note: in windows, you can copy the directory path by right-clicking on the folder name in the file explorer and selection “Copy address as text”. You can then paste it in the the command window_
+   _Note: in Windows, you can copy the directory path by right-clicking on the folder name in the file explorer and selection “Copy address as text”. You can then paste it in the the command window_
 
 5. Run pose estimation steps <br>
 To run pose estimation, you will enter “python”, the script name,  followed by the path to the directory where your videos are location. 
