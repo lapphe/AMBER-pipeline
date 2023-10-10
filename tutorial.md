@@ -16,7 +16,7 @@ Make sure you have followed the instructions for installing and setting up: <br>
 <br>
 Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
 
-# Pose estimation
+# Pose estimation <br>
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
 <br>The script will automatically run the following steps:<br>
 --1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
