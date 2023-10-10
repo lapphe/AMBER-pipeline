@@ -14,29 +14,29 @@ Make sure you have followed the instructions for installing and setting up: <br>
 3) AMBER files from this github repository<br>
 4) Behavior classifiers from the OSF repository <br>
 <br>
-Detailed installation and set up instructions can be found [here](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
+Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
 
 # Pose estimation
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
 <br>The script will automatically run the following steps:<br>
-----1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
-----2 Create videos to check dam tracking<br>
-----3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
-----4 Create videos to check pup detections<br>
-----5 "Unpickle" pup detection files to convert to csv <br>
-----6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
+    1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
+    2 Create videos to check dam tracking<br>
+    3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
+    4 Create videos to check pup detections<br>
+    5 "Unpickle" pup detection files to convert to csv <br>
+    6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
 <br>
 
 ## Run pose estimation steps  
 <br> 
-**1) Open the windows command prompt with administrator privileges**
+**1 Open the windows command prompt with administrator privileges**
 <br>
 <br>
-**2) Activate your deeplabcut conda environment** <br> 
+**2 Activate your deeplabcut conda environment** <br> 
 ``conda activate DEEPLABCUT``
 <br>
 <br>
-**3) Move to the AMBER-pipeline directory** <br>
+**3 Move to the AMBER-pipeline directory** <br>
 Change your current directory so you are in the AMBER-pipeline directory containing all the files downloaded when you cloned the AMBER repository using `cd /d path/to/directory` on windows
 <br> e.g. if the AMBER-pipeline folder is located on the desktop: `cd /d C:\Desktop\AMBER-pipeline`
 <br>
