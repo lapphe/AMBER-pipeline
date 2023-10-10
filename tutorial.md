@@ -29,7 +29,7 @@ The AMBER_pose_estimation.py script will run your videos through all pose estima
 
 ## Run pose estimation steps  
 <br> 
-**1 Open the windows command prompt with administrator privileges**
+**-1 Open the windows command prompt with administrator privileges**
 <br>
 <br>
 **2 Activate your deeplabcut conda environment** <br> 
