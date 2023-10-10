@@ -1,7 +1,7 @@
 # AMBER tutorial
 
 ## Before getting started
-You can use the provided example videos or your own videos to complete this tutorial. The example video files can be downloaded from our OSF repository (https://osf.io/e3dyc/) from the "example_videos" folder. <br>
+<br>You can use the provided example videos or your own videos to complete this tutorial. The example video files can be downloaded from our OSF repository (https://osf.io/e3dyc/) from the "example_videos" folder. <br>
 ![OSF example videos](https://github.com/lapphe/AMBER-pipeline/assets/53009913/f2d20ad6-fbf3-4b65-bd59-a5a92354af95)
 <br> 
 <br>
@@ -16,13 +16,14 @@ Make sure you have followed the instructions for installing and setting up: <br>
 <br>
 Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) <br>
 
-# Pose estimation <br>
+# Pose estimation 
+<br>
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
 <br>The script will automatically run the following steps:<br>
 --1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
 --2 Create videos to check dam tracking<br>
---3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
---4 Create videos to check pup detections<br>
+--3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model <br>
+--4 Create videos to check pup detections <br>
 --5 "Unpickle" pup detection files to convert to csv <br>
 --6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
 <br>
