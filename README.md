@@ -4,7 +4,7 @@ Mother-infant interactions during the early postnatal period are critical for in
 **Check out our [bioxriv preprint](https://www.biorxiv.org/content/10.1101/2023.09.15.557946v1)** <br>
 _AMBER pose estimation models are currently optimized for Long-Evans rats, but we are currently expanding this to several other mouse and rat strains to ensure AMBER can be used with all rodent animal models.<br> Please get in touch if you have videos or frames you would like to contribute to this effort._ <br>
 
-## How does the pipeline work?
+# How does the pipeline work?
 The AMBER pipeline uses side-view video recordings of dam and pups in the home cage. The first steps of the pipeline involve extracting keypoints (labeled body points) from dams and pups using provided DeepLabCut models. Next, keypoint coordinate information produced by the deeplabcut models from dam and pups is joined together and formatted. This data is then imported into SimBA and 218 features are calculated (e.g. the distance between the centroid point of the dam and the centroid point of the pups). The behavior predictions are generated using behavior classifiers trained to recognize seven different maternal behaviors from the features. The result is behavior annotations for every frame of the video. <br>
 ![Figure 1](https://github.com/lapphe/AMBER-pipeline/assets/53009913/0b442b48-a238-4fd2-a065-322480bc6060)
 <br>
