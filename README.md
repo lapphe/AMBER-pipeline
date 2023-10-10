@@ -29,7 +29,7 @@ Behavioral classifiers were generated using SimBA version 1.65.5. Please follow 
 ### Install the circle-fit package
 The AMBER custom feature extraction script uses functions from the circle-fit package. This package is not automatically added during SimBA installation, so it needs to be installed separately in the SimBA environment. 
 
-# Download AMBER scripts
+## Download AMBER files
 1. The pose estimation models and scripts required for the AMBER pipeline can be found in this github repository. You should download all scripts as a zip file or by cloning the repository. <br>
 `git clone https://github.com/lapphe/AMBER-pipeline.git` <br>
 ![git download small](https://user-images.githubusercontent.com/53009913/232549974-0763b7c2-0af1-4b00-8d5c-d7372131be60.png)
