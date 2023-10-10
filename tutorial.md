@@ -5,7 +5,6 @@ You can use the provided example videos or your own videos to complete this tuto
 ![OSF example videos](https://github.com/lapphe/AMBER-pipeline/assets/53009913/f2d20ad6-fbf3-4b65-bd59-a5a92354af95)
 <br> 
 <br>
-
 If you are using your own videos, make sure all the videos you want to analyze at once are in their own  directory on your computer. The pose estimation script will run pose estimation steps on all the video files in the folder you give it. Make sure any videos you do not want run are moved to another location. <br>
 <br>If you are wondering about the best way record videos to be compatible with AMBER, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording). 
 <br>
@@ -14,11 +13,12 @@ Make sure you have followed the instructions for installing and setting up <br>
 2) SimBA <br>
 3) AMBER files from this github repository<br>
 4) Behavior classifiers from the OSF repository <br>
+<br>
 Detailed installation and set up instructions can be found [here](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up "AMBER installation and set up")
 
 # Step 1: Pose estimation
-The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. 
-<br>  The script will automatically run the following steps:<br>
+The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
+<br>The script will automatically run the following steps:<br>
 ----1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
 ----2 Create videos to check dam tracking<br>
 ----3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
@@ -40,13 +40,11 @@ The AMBER_pose_estimation.py script will run your videos through all pose estima
 _Note: in windows, you can copy the directory path by right-clicking on the folder name in the file explorer and selection “Copy address as text”. You can then paste it in the the command window_
 <br>
 <br>
-<br>
 <br> 5) To run pose estimation, you will enter “python”, the script name,  followed by the path to the directory where your videos are location.
 <br> 
 e.g. `python AMBER_pose_estimation.py C:\Desktop\example_videos`
 <br> Press enter to execute the command.
 <br>
-
 <br>
 The deeplabcut files will appear in the same directory as your videos. There will also be **two new folders created**: <br>
 <br>
