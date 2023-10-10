@@ -89,8 +89,7 @@ _Note: This step can take a long time for long videos. The convex hull and back 
 
 8. Run the machine models <br>
 It’s a good idea to [validate the provided models on your videos](https://github.com/sgoldenlab/simba/blob/master/docs/validation_tutorial.md) on your videos* and determine a good discrimination threshold for each classifier before running the models on all of your videos. Below are discrimination thresholds that work well for the example videos, but you should confirm performance with your own videos. <br>
-![threshold table for github](https://github.com/lapphe/AMBER-pipeline/assets/53009913/4870694d-14d4-414e-bbd8-22a05e445ccc)
-
+![threshold table for github](https://github.com/lapphe/AMBER-pipeline/assets/53009913/9120f595-45ee-49f3-954c-f586506fad21)
 
 9. Analyze all of your videos <br>
 Find the models (they were moved to _AMBER-pipline/SimBA_AMBER_project/models_ during set up) and then enter the discrimination threshold and minimum bout length for analysis. Click “Run models”. <br>
