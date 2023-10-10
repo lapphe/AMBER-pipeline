@@ -9,22 +9,22 @@ If you are using your own videos, make sure all the videos you want to analyze a
 <br>If you are wondering about the best way record videos to be compatible with AMBER, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording). <br>
 <br>
 Make sure you have followed the instructions for installing and setting up: <br>
-1. DeepLabCut <br>
-2. SimBA <br>
-3. AMBER files from this github repository<br>
-4. Behavior classifiers from the OSF repository <br>
+--1 DeepLabCut <br>
+--2 SimBA <br>
+--3 AMBER files from this github repository<br>
+--4 Behavior classifiers from the OSF repository <br>
 <br>
 Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
 
 # Pose estimation
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
 <br>The script will automatically run the following steps:<br>
-    1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
-    2 Create videos to check dam tracking<br>
-    3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
-    4 Create videos to check pup detections<br>
-    5 "Unpickle" pup detection files to convert to csv <br>
-    6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
+--1 Pose estimation for dams for all videos using DeepLabCut and the AMBER dam pose estimation model<br>
+--2 Create videos to check dam tracking<br>
+--3 Pose estimation for pups for all videos using DeepLabCut and the AMBER pup multi-animal pose estimation model<br>
+--4 Create videos to check pup detections<br>
+--5 "Unpickle" pup detection files to convert to csv <br>
+--6 Join and reformat pup and dam pose estimation output so it is ready to use with SimBA 
 <br>
 
 ## Run pose estimation steps  
