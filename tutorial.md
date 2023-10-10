@@ -29,14 +29,14 @@ The AMBER_pose_estimation.py script will run your videos through all pose estima
 
 ## Run pose estimation steps  
 <br> 
-**Open the windows command prompt with administrator privileges**
+1. Open the windows command prompt with administrator privileges
 <br>
 <br>
-2. **Activate your deeplabcut conda environment** <br> 
+2. Activate your deeplabcut conda environment <br> 
 ``conda activate DEEPLABCUT``
 <br>
 <br>
-**3 Move to the AMBER-pipeline directory** <br>
+3. Move to the AMBER-pipeline directory <br>
 Change your current directory so you are in the AMBER-pipeline directory containing all the files downloaded when you cloned the AMBER repository using `cd /d path/to/directory` on windows
 <br> e.g. if the AMBER-pipeline folder is located on the desktop: `cd /d C:\Desktop\AMBER-pipeline`
 <br>
