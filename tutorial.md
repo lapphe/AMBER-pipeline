@@ -62,9 +62,8 @@ e.g. `Python AMBER_pose_estimation.py C:\Desktop\hannah_test_short skip_create_v
 Behavior classification is performed in SimBA using the preconfigure AMBER_SimBA_project. <br>
 
 1. Start the SimBA conda environment and open simba
-<br>
 `conda activate simbaenv` <br>
-`simba` <br>
+`simba` 
 2. Load the SimBA_AMBER_project using the SimBA GUI. <br>
 The project config file is found in _AMBER-pipeline/SimBA_AMBER_project/project_folder/project_config.ini_. From here, you can follow the SimBA user [guide for analyzing new videos](https://github.com/sgoldenlab/simba/blob/master/docs/Scenario2.md). Below is an overview of the steps. <br>
 
