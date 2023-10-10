@@ -14,7 +14,7 @@ Make sure you have followed the instructions for installing and setting up: <br>
 --3 AMBER files from this github repository<br>
 --4 Behavior classifiers from the OSF repository <br>
 <br>
-Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up)
+Detailed installation and set up instructions can be found [here.](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) <br>
 
 # Pose estimation <br>
 The AMBER_pose_estimation.py script will run your videos through all pose estimation and post-pose estimation steps required for all videos in the video folder. It will then prepare files for use in SimBA. <br>
@@ -29,7 +29,7 @@ The AMBER_pose_estimation.py script will run your videos through all pose estima
 
 ## Run pose estimation steps  
 <br> 
-_Open the windows command prompt with administrator privileges_
+**Open the windows command prompt with administrator privileges**
 <br>
 <br>
 2. **Activate your deeplabcut conda environment** <br> 
