@@ -12,6 +12,9 @@ The AMBER pipeline uses side-view video recordings of dam and pups in the home c
 See our [annotations wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Behavior-annotation-information) for an overview of how behaivors are operationalized. Our full [AMBER ethogram guide](https://docs.google.com/document/d/1YB2kZJxlYC2BvaRYZfWjrgPuMP7aJ4sWBeQbfwD3xLA/edit?usp=sharing) provides detailed information on how behavior annotations were made to train each of the behavior classifiers in SimBA. <br>
 AMBER behavior classifiers for SimBA can be downloaded from OSF: https://osf.io/e3dyc/ <br>
 
+# Example useage
+Check out the [tutorial](https://github.com/lapphe/AMBER-pipeline/blob/main/tutorial.md) for step by step instructions for using the AMBER pipline on example videos or your own videos.
+
 # Installation and set up
 See the [installation wiki page](https://github.com/lapphe/AMBER-pipeline/wiki/Installations-and-set-up) for detailed information. <br>
 We recommend installing deeplabcut and SimBA in different anaconda environments as these software programs have different dependency requirements. 
