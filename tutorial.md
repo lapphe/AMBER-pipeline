@@ -61,11 +61,11 @@ e.g. `Python AMBER_pose_estimation.py C:\Desktop\hannah_test_short skip_create_v
 # Behavior classification <br>
 Behavior classification is performed in SimBA using the preconfigure AMBER_SimBA_project. <br>
 
-1. Start the SimBA conda environment and open simba
+1. Start the SimBA conda environment and open simba<br>
 `conda activate simbaenv` <br>
 `simba` 
 2. Load the SimBA_AMBER_project using the SimBA GUI. <br>
-The project config file is found in _AMBER-pipeline/SimBA_AMBER_project/project_folder/project_config.ini_. From here, you can follow the SimBA user [guide for analyzing new videos](https://github.com/sgoldenlab/simba/blob/master/docs/Scenario2.md). Below is an overview of the steps. <br>
+The project config file is found in _AMBER-pipeline/SimBA_AMBER_project/project_folder/project_config.ini_. From here, you can follow the SimBA user [guide for analyzing new videos](https://github.com/sgoldenlab/simba/blob/master/docs/Scenario2.md) or follow the steps below. <br>
 
 3. Import videos <br> 
 These should be the same videos you performd pose estimation on. You can select the "Import SYMLINK" box to use symbolic links to the videos instead of copying the full videos into the SimBA project.
@@ -77,12 +77,13 @@ As described in the [Video recording section](https://github.com/lapphe/AMBER-pi
 
 6. Skip outlier correction <br>
 We recommend skipping outlier correction because this step relies on body-length distance across all frames to perform these calculations, which is influenced by the dramatic differences in body length when the dam is near the front versus back of the cage.<br>
-(Don’t forget to actually tell SimBA to skip this step on the Outlier Correction tab! This will ensure the csv files are copied over to the new location and can be used ifor feature extraction in the next step.) 
+_(Don’t forget to actually tell SimBA to skip this step on the Outlier Correction tab! This will ensure the csv files are copied over to the new location and can be used ifor feature extraction in the next step.)_ 
 7. Extract features <br>
 Select "Apply user-defined feature extraction script" and use the customized AMBER feature extraction script. This script is located in AMBER-pipline/SimBA_AMBER_project/AMBER_feature_extraction/amber_feature_extraction.py<br>
 ![extract features](https://user-images.githubusercontent.com/53009913/232091989-cd38972c-6d97-4248-b5c8-2384bc7938e5.png)
 
 _Note: This step can take a long time for long videos. The convex hull and back circle fitting calculations take a lot of computational time, but are among the most important features for several behavioral classifiers. For an hour long video recorded at 30fps, this step takes about 25 minutes per video, however, run time will vary depending on your computer specs._ 
+<br>
 <br>
 **(Skip the "Label behavior" and "Train machine models" steps. Those steps are used for creating new behavior classifier models. We will use previously created models)** 
 
