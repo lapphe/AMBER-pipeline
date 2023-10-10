@@ -31,11 +31,8 @@ The AMBER custom feature extraction script uses functions from the circle-fit pa
 ## Download AMBER files
 1. The pose estimation models and scripts required for the AMBER pipeline can be found in this github repository. You should download all scripts as a zip file or by cloning the repository. <br>
 `git clone https://github.com/lapphe/AMBER-pipeline.git` <br>
-![git download small](https://user-images.githubusercontent.com/53009913/232549974-0763b7c2-0af1-4b00-8d5c-d7372131be60.png)
 
-2. You will need to update the AMBER SimBA project config file to reflect the specific location (path) of the project files on your computer. To do this, find the project_config.ini file located in AMBER-pipeline/SimBA_AMBER_project/project_folder/.
-
-3. Update the **project_path** (line 2) and **model_dir** (line 8) int he config file to reflect the current location. 
+2. You will need to update the AMBER SimBA project config file to reflect the specific location (path) of the project files on your computer. To do this, find the project_config.ini file located in AMBER-pipeline/SimBA_AMBER_project/project_folder/. Update the **project_path** (line 2) and **model_dir** (line 8) in the config file to reflect the current location. <br>
 4. The behavioral classifiers are large files and cannot be stored on github. Please download them from our [OSF repository](https://osf.io/e3dyc/). Move the behavior classification models to the “models” folder in AMBER-pipeline/SimBA_AMBER_project/models.<br>
 ![OSF download small](https://user-images.githubusercontent.com/53009913/232550321-32c23eca-334e-4c9e-a762-39e07590a962.png)
 
