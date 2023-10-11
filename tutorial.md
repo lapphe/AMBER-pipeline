@@ -3,7 +3,7 @@
 ## Before Getting Started
 You can use the provided example videos or your own videos to complete this tutorial. The example video files can be downloaded from our OSF repository ([OSF example videos](https://osf.io/e3dyc/)) from the "example_videos" folder.
 
-If you are using your own videos, make sure all the videos you want to analyze at once are in their own directory on your computer. The pose estimation script will run pose estimation steps on all the video files in the folder you give it. Move any videos you do not want to run to another location.
+If you are using your own videos, make sure all the videos you want to analyze at once are in their own directory on your computer. The pose estimation will be run on all the video files in the folder you specify. Move any videos you do not want to run to another location.
 
 If you are wondering about the best way to record videos to be compatible with AMBER, check out the [Video Recording information page](https://github.com/lapphe/AMBER-pipeline/wiki/Video-Recording).
 
