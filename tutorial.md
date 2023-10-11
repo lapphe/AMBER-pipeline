@@ -43,8 +43,8 @@ They can be anywhere on your computer -they do not need to be in the AMBER-pipel
    _Note: in Windows, you can copy the directory path by right-clicking on the folder name in the file explorer and selection “Copy address as text”. You can then paste it in the the command window_
 
 5. Run pose estimation steps <br>
-To run pose estimation, you will enter “python”, the script name,  followed by the path to the directory where your videos are location. 
-e.g. `python AMBER_pose_estimation.py C:\Desktop\example_videos`
+To run pose estimation, you will enter “python”, the script name,  followed by the path to the directory where your videos are location. <br>
+e.g. `python AMBER_pose_estimation.py C:\Desktop\example_videos` <br>
 Press enter to execute the command.<br>
 The deeplabcut files will appear in the same directory as your videos. There will also be **two new folders created**: <br>
 The first folder, _pose_estimation_videos_, contains the video with the labeled dam and pup points to check model performance. These videos have been move to a separate directory to make importing videos into SimBA easier later on. <br>
