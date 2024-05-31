@@ -81,6 +81,7 @@ def main(argv):
         print()
         print('Creating pup detections videos')
         deeplabcut.create_video_with_all_detections(pup_config, [video_directory])
+        track_video = video_directory + os.sep + 'pose_estimation_videos' + os.sep
         for file_name in os.listdir(video_directory):
             if "pup-nine-pt" in file_name and file_name.endswith('.mp4'):
                 src_path = os.path.join(video_directory, file_name)
